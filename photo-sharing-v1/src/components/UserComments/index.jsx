@@ -127,7 +127,11 @@ function UserComments({ setTopBarContext }) {
                   {/* Left Side: Photo Thumbnail */}
                   <Box className="comment-thumbnail-container">
                     <img
-                      src={`/images/${comment.file_name}`}
+                      src={
+                        window.location.hostname.includes("csb.app")
+                          ? `https://${window.location.host.replace(/-300\d/, "-3000")}/images/${comment.file_name}`
+                          : `/images/${comment.file_name}`
+                      }
                       alt="Photo comment was made on"
                       className="comment-photo-thumbnail"
                       onError={(e) => {

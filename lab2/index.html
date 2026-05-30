@@ -32,8 +32,8 @@
             // Angular doesn't work using the file protocol and it dies with an obscure error
             // message.  Since the project's files are accessible using either the file or
             // http protocols we warn the user if they are not using http.
-            if(window.location.protocol !== 'http:') {
-                var msg = "Project #6 files must be accessed with the http protocol (not from local files)."  +
+            if(window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
+                var msg = "Project #6 files must be accessed with the http or https protocol (not from local files)."  +
                                 "\nUse the URL http://localhost:3000";
                 console.error(msg);
                 alert(msg);

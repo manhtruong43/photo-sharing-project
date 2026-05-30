@@ -143,11 +143,7 @@ function UserPhotos({ advancedFeatures, setTopBarContext, loggedInUser }) {
 
     const renderPhotoCard = (photo) => {
         // Use server path for images (works for both static & uploaded photos)
-        let imageSrc = `/images/${photo.file_name}`;
-        if (window.location.hostname.includes("csb.app")) {
-            const backendHost = window.location.host.replace(/-300\d/, "-3000");
-            imageSrc = `https://${backendHost}/images/${photo.file_name}`;
-        }
+        const imageSrc = `/images/${photo.file_name}`;
         const cs = commentState[photo._id] || {};
 
         return (

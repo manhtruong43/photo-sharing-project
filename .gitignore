@@ -14,6 +14,5 @@ __MACOSX/
 *.log
 npm-debug.log*
 
-# Backend uploaded photos (ignore photos but keep the directory)
-lab2/images/*
-!lab2/images/.gitkeep
+# Backend uploaded photos (ignore only uploaded photos starting with U)
+lab2/images/U*

@@ -1,0 +1,82 @@
+.userlist-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.userlist-header {
+  font-family: var(--font-family-title) !important;
+  font-weight: 700 !important;
+  color: var(--text-main);
+  margin-bottom: 16px !important;
+  letter-spacing: -0.3px;
+}
+
+.userlist-list {
+  padding: 0 !important;
+}
+
+.userlist-item-btn {
+  border-radius: var(--radius-sm) !important;
+  margin-bottom: 6px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 10px 14px !important;
+}
+
+.userlist-item-btn:hover {
+  background-color: #f1f5f9 !important;
+  transform: translateX(4px);
+}
+
+.userlist-item-active {
+  background-color: #e0e7ff !important;
+  color: #4f46e5 !important;
+  font-weight: 600 !important;
+}
+
+.userlist-item-active:hover {
+  background-color: #e0e7ff !important;
+}
+
+.userlist-avatar {
+  background: var(--secondary-gradient) !important;
+  font-family: var(--font-family-title) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.userlist-item-text {
+  font-family: var(--font-family-body) !important;
+  font-weight: inherit !important;
+}
+
+.userlist-count-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-family-title);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.badge-photos {
+  background-color: #10b981; /* Green */
+}
+
+.badge-comments {
+  background-color: #ef4444; /* Red */
+  cursor: pointer;
+}
+
+.badge-comments:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.4);
+}

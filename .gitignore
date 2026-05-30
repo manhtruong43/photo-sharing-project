@@ -1,0 +1,19 @@
+# Dependencies
+**/node_modules/
+photo-sharing-v1/build/
+
+# OS/System files
+.DS_Store
+Thumbs.db
+__MACOSX/
+.idea/
+.vscode/
+
+# Local text logs and draft files
+*.text
+*.log
+npm-debug.log*
+
+# Backend uploaded photos (ignore photos but keep the directory)
+lab2/images/*
+!lab2/images/.gitkeep

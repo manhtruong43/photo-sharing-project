@@ -1,0 +1,22 @@
+.main-topbar-buffer {
+  margin-top: 85px; /* height of TopBar + buffer */
+}
+
+.main-grid-item {
+  height: calc(100vh - 120px);
+  padding: 20px !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-md) !important;
+  background-color: var(--card-bg) !important;
+  overflow-y: auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-grid-item:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Ensure the body grid handles scaling gracefully on large monitors */
+.main-container {
+  padding: 0 24px;
+}

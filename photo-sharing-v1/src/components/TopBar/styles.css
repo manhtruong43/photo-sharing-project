@@ -1,0 +1,87 @@
+.topbar-appBar {
+  background: var(--primary-gradient) !important;
+  box-shadow: var(--shadow-lg) !important;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.topbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.topbar-brand {
+  font-family: var(--font-family-title) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+}
+
+.topbar-context {
+  font-family: var(--font-family-body) !important;
+  font-weight: 500 !important;
+  opacity: 0.9;
+  font-size: 1.05rem !important;
+  margin-left: 20px !important;
+  padding-left: 20px;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-checkbox-label {
+  font-family: var(--font-family-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #ffffff;
+}
+
+.topbar-greeting {
+  font-family: var(--font-family-body) !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  white-space: nowrap;
+}
+
+.topbar-please-login {
+  font-family: var(--font-family-body) !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.95rem !important;
+  font-style: italic;
+}
+
+.topbar-btn {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #ffffff !important;
+  font-family: var(--font-family-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  padding: 5px 14px !important;
+  white-space: nowrap;
+}
+
+.topbar-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #ffffff !important;
+}
+
+.topbar-btn-logout {
+  border-color: rgba(255, 180, 180, 0.7) !important;
+  color: #ffcdd2 !important;
+}
+
+.topbar-btn-logout:hover {
+  background: rgba(255, 100, 100, 0.15) !important;
+  border-color: #ffcdd2 !important;
+}
+

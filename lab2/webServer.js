@@ -60,8 +60,29 @@ mongoose.connect('mongodb://blogtest1:qR5TyA8oj9ZF7xsw@ac-yxezx0n-shard-00-00.tk
 
 // We have the express static module (http://expressjs.com/en/starter/static-files.html) do all
 // the work for us.
+app.enable('trust proxy');
 app.use(express.static(__dirname));
-app.use(session({secret: 'secretKey', resave: false, saveUninitialized: false}));
+app.use(session({
+    secret: 'secretKey',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: false, // Fallback for local HTTP development
+        sameSite: 'lax'
+    }
+}));
+
+// Middleware to dynamically adjust cookies for CodeSandbox iframes (HTTPS)
+app.use(function (request, response, next) {
+    const isCsb = request.headers.host && request.headers.host.endsWith('.csb.app');
+    const isHttps = request.headers['x-forwarded-proto'] === 'https' || request.secure;
+    if (isCsb || isHttps) {
+        request.session.cookie.secure = true;
+        request.session.cookie.sameSite = 'none';
+    }
+    next();
+});
+
 app.use(bodyParser.json());
 
 // Auth middleware: reject all requests (except login/logout) if not logged in
